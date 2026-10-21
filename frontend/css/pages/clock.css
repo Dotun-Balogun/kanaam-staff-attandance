@@ -1,0 +1,18 @@
+/* Clock page: live clock, scan pad, result card */
+.clock-display{text-align:center}
+.clock-display .time{font-size:clamp(2rem,9vw,3.4rem);font-weight:700;letter-spacing:.02em}
+.clock-display .date{color:var(--mut)}
+.pad{display:grid;justify-items:center;text-align:center;padding:clamp(16px,4vw,28px) 8px}
+.ring{width:clamp(120px,36vw,180px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:var(--mist);border:3px solid var(--line);color:var(--navy);margin-bottom:16px}
+.ring svg{width:50%;height:50%}
+.wait .ring{border-color:var(--amber);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 16px rgba(232,163,61,.18)}}
+.res{width:min(100%,400px);border-radius:12px;padding:14px 18px;margin-top:8px}
+.res b{display:block;font-size:1.2rem}
+.res.ok{background:#e3f4eb;color:#14663f}
+.res.late,.res.duplicate{background:#fdf0da;color:#8a5a0c}
+.res.unknown,.res.error{background:#fbe6e3;color:#8f2b1e}
+
+/* Dark hero clock */
+.clock-display{background:var(--navy);border-color:var(--navy);color:#fff;border-bottom:4px solid var(--gold)}
+.clock-display .date{color:#c9d4e6}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12233f">
+  <title>Reports · Staff Attendance</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="reports">
+  <div class="app">
+    <aside id="sidebar"></aside>
+    <main class="main">
+      <h2>Reports</h2>
+      <p class="sub">Filter by date and department, then export for payroll or records.</p>
+      <section class="card">
+        <div class="row">
+          <div class="field"><label for="from">From</label><input type="date" id="from"></div>
+          <div class="field"><label for="to">To</label><input type="date" id="to"></div>
+          <div class="field"><label for="dept">Department</label><select id="dept"></select></div>
+          <a class="btn" id="export" href="#">Export CSV</a>
+        </div>
+      </section>
+      <section class="card"><p class="msg" id="summary"></p><div id="rows"></div></section>
+    </main>
+  </div>
+  <script type="module" src="js/pages/reports.js"></script>
+</body>
+</html>

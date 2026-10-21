@@ -1,0 +1,24 @@
+/* App frame: top navigation bar on desktop, slim header + bottom tabs on mobile */
+.app{min-height:100vh}
+.sidebar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:28px;padding:12px var(--space);background:var(--navy);color:#e8edf5;border-bottom:3px solid var(--gold)}
+.brand{flex:none}
+.brand-title{margin:0;font:700 17px/1.25 var(--serif)}
+.brand-sub{margin:2px 0 0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{padding:9px 16px;border-radius:99px;color:#c9d4e6;text-decoration:none;font-weight:500}
+.nav a:hover{background:var(--navy-2);color:#fff}
+.nav a[aria-current=page]{background:var(--gold);color:var(--navy);font-weight:700}
+.hw{display:flex;gap:8px;align-items:center;font-size:13px;padding-left:18px;border-left:1px solid #34507c;white-space:nowrap}
+.hw i{width:10px;height:10px;border-radius:50%;background:var(--bad);flex:none}
+.hw.up i{background:#4ddc9a}
+.main{max-width:1100px;margin:0 auto;padding:var(--space)}
+
+@media (max-width:900px){
+  .sidebar{justify-content:space-between;gap:12px;padding:10px 14px}
+  .brand-sub{display:none}
+  .brand-title{font-size:14px}
+  .hw{border:0;padding:0}
+  .nav{position:fixed;left:0;right:0;bottom:0;margin:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--navy);border-top:3px solid var(--gold);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+  .nav a{text-align:center;font-size:12.5px;padding:10px 2px;border-radius:9px}
+  .main{padding-bottom:96px}
+}

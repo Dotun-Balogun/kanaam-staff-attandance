@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12233f">
+  <title>Dashboard · Staff Attendance</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <aside id="sidebar"></aside>
+    <main class="main">
+      <h2>Dashboard</h2>
+      <p class="sub">Today at a glance. Refreshes automatically.</p>
+      <div class="stats">
+        <div class="stat"><b id="s-total">0</b><span>Total staff</span></div>
+        <div class="stat ok"><b id="s-present">0</b><span>Present today</span></div>
+        <div class="stat warn"><b id="s-late">0</b><span>Late today</span></div>
+        <div class="stat bad"><b id="s-absent">0</b><span>Not in yet</span></div>
+      </div>
+      <section class="card"><h3>Today's activity</h3><div id="today"></div></section>
+      <section class="card"><h3>Not yet clocked in</h3><div id="absent"></div></section>
+    </main>
+  </div>
+  <script type="module" src="js/pages/dashboard.js"></script>
+</body>
+</html>

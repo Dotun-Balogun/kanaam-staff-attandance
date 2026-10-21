@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12233f">
+  <title>Settings · Staff Attendance</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="settings">
+  <div class="app">
+    <aside id="sidebar"></aside>
+    <main class="main">
+      <h2>Settings</h2>
+      <p class="sub">Set working hours and manage departments.</p>
+      <section class="card">
+        <h3>Working hours</h3>
+        <div class="row">
+          <div class="field"><label for="start">Resumption time</label><input type="time" id="start"></div>
+          <div class="field"><label for="end">Closing time</label><input type="time" id="end"></div>
+          <div class="field"><label for="grace">Grace period (minutes)</label><input type="number" id="grace" min="0" max="120"></div>
+          <button class="btn" id="save">Save hours</button>
+        </div>
+        <p class="msg" id="hours-msg" role="status"></p>
+      </section>
+      <section class="card">
+        <h3>Departments</h3>
+        <div class="row">
+          <div class="field"><label for="dname">Department name</label><input id="dname" placeholder="e.g. Treasury"></div>
+          <button class="btn" id="add">Add department</button>
+        </div>
+        <p class="msg" id="dept-msg" role="status"></p>
+        <div id="depts"></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="js/pages/settings.js"></script>
+</body>
+</html>

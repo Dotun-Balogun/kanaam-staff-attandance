@@ -1,0 +1,18 @@
+/* Design tokens, reset, typography. Navy and gold: an official, government look. */
+:root{
+  --ink:#14213d; --navy:#12233f; --navy-2:#1f3a63; --gold:#c9a227; --amber:#c9a227;
+  --mist:#f3f5f9; --card:#fff; --line:#dde3ec; --ok:#1f8a5b; --bad:#c4402f; --mut:#5b677a;
+  --radius:10px; --space:clamp(14px,3vw,34px);
+  --serif:Georgia,"Times New Roman",serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:15px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--mist)}
+img,svg{max-width:100%}
+h2{margin:0 0 4px;font:700 clamp(1.5rem,4vw,2rem)/1.2 var(--serif)}
+h2::after{content:"";display:block;width:44px;height:3px;background:var(--gold);margin-top:8px}
+h3{margin:0 0 10px;font:700 1.1rem var(--serif)}
+.sub{margin:12px 0 22px;color:var(--mut)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
